@@ -1,8 +1,13 @@
 name: Run the python project
 on: [push]
 jobs:
-  OS-Setup:
+  Run-Python:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Message
-        run: echo "Hello, Github Actions!"
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+      - name: Run Python main script
+        run: python main.py
+        
