@@ -1,1 +1,8 @@
 name: Run the python project
+on: [push]
+jobs:
+  OS-Setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Hello, Github Actions!"
